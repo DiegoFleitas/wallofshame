@@ -17,8 +17,10 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
+Auth::routes();
+
 Route::get('/users', 'UsersController@index')->name('users.index');
 
-Auth::routes();
+Route::get('/bots', 'BotsController@index')->name('bots.index');
 
 Route::get('/home', 'HomeController@index')->name('home');
